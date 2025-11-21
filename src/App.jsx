@@ -92,13 +92,14 @@ const App = () => {
   return (
     <div className='min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 flex flex-col lg:flex-row'>
       {/* Top-left logo (place your logo file at `public/logo.png`) */}
-      <div className='fixed top-5 left-6 z-50'>
-        <img width="70" height="70" src="https://img.icons8.com/bubbles/100/apple-notes.png" alt="note"/>
-      </div>
+     
       {/* Left Panel: Add Notes Form - Fixed */}
-      <div className='lg:w-2/5 w-full bg-slate-800 shadow-2xl p-8 lg:border-r border-slate-700 lg:sticky lg:top-0 lg:h-screen lg:overflow-y-auto'>
+      <div  className='lg:w-2/5 w-full bg-slate-800 shadow-2xl p-8 lg:border-r border-slate-700 lg:sticky lg:top-0 lg:h-screen lg:overflow-y-auto'>
         <div className='max-w-md mx-auto'>
-          <h1 className='text-4xl font-bold text-white mb-2 px-16'>My Notes</h1>
+          <div className='h-18 w-18 object-cover absolute left-6 -mt-4 mb-4'>
+           <img   src="https://img.icons8.com/bubbles/100/apple-notes.png" alt="note"/>
+           </div>
+          <h1  className='text-4xl font-bold text-white mb-2 px-16'>My Notes</h1>
           <p className='text-slate-400 mb-8'>Create and organize your thoughts</p>
           
           <form onSubmit={(e) => submitHandler(e)} className='space-y-6'>
